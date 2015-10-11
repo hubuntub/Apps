@@ -1,0 +1,6 @@
+<div class="hbox thumbnail">
+    <div class="hbox" ng-repeat="product in productList | productFilter:request">
+        <img ng-src="{{product.thumbnail | photoFilter}}"/>
+
+    </div>
+</div>

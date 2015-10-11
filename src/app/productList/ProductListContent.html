@@ -1,0 +1,48 @@
+<aside>
+  <div>
+    <form name="requestForm" class="vbox">
+      <label for="keyword">
+        <input name="keyword" ng-model="request.criteria" id="keyword" type="text" placeholder="mots clés..."/>
+      </label>
+      <label for="ll">
+        <input name="ll" ng-model="request.ll" id="ll" type="checkbox"/>
+        Logiciel Libre
+      </label>
+      <label for="ml">
+        <input name="ml" ng-model="request.ml" id="ml" type="checkbox"/>
+        MIT License
+      </label>
+      <label for="gpl">
+        <input name="gpl" ng-model="request.gpl" id="gpl" type="checkbox"/>
+        GNU General Public License
+      </label>
+      <label for="casal">
+        <input name="casal" ng-model="request.casal" id="casal" type="checkbox"/>
+        Commons Attribution-Share Alike License
+      </label>
+      <label for="sla">
+        <input name="sla" ng-model="request.sla" id="sla" type="checkbox"/>
+        Software Licence Agreement
+      </label>
+      <label for="multiOs">
+        <input name="multiOs" ng-model="request.multiOs" id="multiOs" type="checkbox"/>
+        Multi platforme
+      </label>
+
+      <div ui-view="extracriteria"></div>
+    </form>
+  </div>
+</aside>
+
+<section>
+  <div class="tabs tabs-style-bar">
+    <nav>
+      <ul>
+        <li><a class="icon icon-grid" ui-sref="productList.grid"><span>Liste</span></a></li>
+        <li><a class="icon icon-quick-view" ui-sref="productList.quickview"><span>Détail</span></a></li>
+        <li><a class="icon icon-thumbnail" ui-sref="productList.thumbnail"><span>Miniature</span></a></li>
+      </ul>
+    </nav>
+    <div ui-view="productList"></div>
+  </div>
+</section>

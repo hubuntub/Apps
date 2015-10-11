@@ -1,0 +1,14 @@
+<div class="vbox">
+    <table class="grid">
+        <tr>
+            <th style="width:20px"></th>
+            <th style="width:300px">Catégorie</th>
+            <th style="width:300px">Logiciel</th>
+        </tr>
+        <tr ng-repeat="product in productList | productFilter:request">
+            <td><img src="assets/images/item.png"/></td>
+            <td>{{product.reference}}</td>
+            <td>{{product.name}}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,12 @@
+<div class="hbox quickview">
+  <div class="hbox" ng-repeat="product in productList | productFilter:request">
+    <img ng-src="{{product.thumbnail | photoFilter}}"/>
+
+    <div class="pname">{{product.name}}</div>
+
+    <div class="vbox">
+      <div>Catégorie : <span>{{product.reference}}</span></div>
+      <div>License : <span>{{product.license}}</span></div>
+    </div>
+  </div>
+</div>
